@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = parseInt(prompt("Enter a value :"));
+        var b = parseInt(prompt("Enter b value :"));
+        var c = parseInt(prompt("Enter c value :"));
+        var res1, res2,res;
+        res1 = (a > b) ? a : b;
+        res2 = (res1 > c) ? res1 : c;
+        document.write(`${res2}, `);
+        res2=(res1<c)?res1:c;
+        res1=(a<b)?a:b;
+        res=(res1>res2)?res1:res2;
+        document.write(`${res}, `);
+        res=(res1<res2)?res1:res2;
+        document.write(`${res}, `);
+        
+      
+    </script>
+</body>
+
+</html>

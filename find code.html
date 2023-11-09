@@ -1,0 +1,53 @@
+<Doctype html>
+  <html>
+    <head>
+      <title>sankar</title>
+    </head>
+    <body>
+      <script>
+        var n = prompt("enter the number"); //1230
+        var s = "";
+        var con=""
+        document.write(`${n} <br>`);
+        while (n != 0) {
+          var res = parseInt(n % 10);
+       
+         
+          switch (res) {
+            case 0: con+="Z"
+              break;
+            case 1:
+              con+="O";
+              break;
+            case 2: con+= "T";
+              break;
+            case 3:
+              con+="T";
+              break;
+            case 4:
+            con+="F";
+              break;
+            case 5:
+              con+="F";
+              break;
+            case 6:
+              con+="S";
+              break;
+            case 7:
+              con+="S";
+              break;
+            case 8:
+             con+= "E";
+              break;
+            case 9:
+              con+="N";
+              break;
+          }
+  
+          n = parseInt(n / 10);
+        }
+        document.write(con.split('').reverse().join(""));
+      </script>
+    </body>
+  </html></Doctype
+>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        
+        var i = parseInt(prompt("Enter the number"));
+        var m = parseInt(prompt("Enter the number"));
+        for(var n=i;n<=m;n++){
+        var count = 0;
+        var n1=n,sum=0;
+        while (n != 0) {
+            count++;
+            n=parseInt(n/10);
+        }
+        n=n1;
+        while(n1!=0){
+            var res=n1%10;
+            let p=1;
+            for(var i=1;i<=count;i++){
+                p=p*res;
+            }
+            sum=sum+p;
+            n1=parseInt(n1/10);
+        }
+        if(n==sum){
+            document.write(`${n} <br>`)
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

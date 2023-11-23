@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td {
+        padding: 5px;
+        text-align: center;
+      }
+      div {
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px 2px black;
+        position: absolute;
+        left: 550px;
+        top: 150px;
+        width: 450px;
+        height: 390px;
+      }
+      h1 {
+        position: absolute;
+        left: 50px;
+      }
+      table {
+        position: absolute;
+        top: 75px;
+        left: 40px;
+        /* border: 2px solid lightgray; */
+      }
+      input {
+        padding: 6px;
+        border-radius: 5px;
+        border: 1px solid black;
+      }
+      body {
+        background-color: lightgray;
+      }
+      .but1 {
+        position: absolute;
+        top: 300px;
+        left: 150px;
+        background-color: blue;
+        color: whitesmoke;
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 5px 15px;
+      }
+      h3{
+        position: absolute;
+        top: 235px;
+        left: 10px;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Fixed deposit calculator</h1>
+      <table>
+        <tr>
+          <td><label for="">UserName</label></td>
+          <td><input type="text" id="User"></td>
+        </tr>
+        <tr>
+          <td><label for="">Amount</label></td>
+          <td><input type="number" id="Amount" ></td>
+        </tr>
+        <tr>
+          <td><label for="">Tenure</label></td>
+          <td><input type="number"  id="Tenure"></td>
+        </tr>
+        <tr>
+          <td><label for="">Age</label></td>
+          <td><input type="number" id="Age" ></td>
+        </tr>
+       
+        <h3 id="h3"></h3>
+        <button type="submit" class="but1" onclick="myfun()">Submit</button>
+        
+      </table>
+    </div>
+
+    <script>
+        function myfun(){
+            var UserName=document.getElementById("User").value;
+        var amt=document.getElementById("Amount").value;
+        amt=parseInt(amt);
+        var time=document.getElementById("Tenure").value;
+        var rate;
+        if(document.getElementById("Age").value<60){
+            rate=6;
+        }
+        else{
+            rate=7.5;
+        }
+        var  si=(amt*time*rate)/100;
+       si= parseInt(si);
+        document.getElementById("h3").innerHTML="Hello "+UserName+"!"+" <br> the total amount you will receive after "+time+"years is "+(si+amt);
+        
+        }
+        
+        
+    </script>
+
+  </body>
+</html>
